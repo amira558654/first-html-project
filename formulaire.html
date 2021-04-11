@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+  <title>Mon premier Formulaire</title>
+  <style type="text/css">
+  h1{
+      margin-left:0%;
+  }
+
+
+
+
+
+form {
+ background-color:#FAFAFA;
+ padding:10px;
+ width:280px;
+         display: inline-block;
+ }
+
+  .slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 15px;
+  border-radius: 5px;
+  background: #525ECC;
+
+  opacity: 0.7;
+
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+  </style>
+</head>
+
+<body>
+<h1> Votre Avis nous Interésse</h1>
+   <div style="float:left;">
+  <form action="Formulaire 1" method="post">
+      <fieldset>
+      <legend> Informations Personnelles : </legend>
+    <div>
+        <label for="name">1. Nom :</label>
+        <input type="text" id="name" name="user_name">
+    </div>
+    <div>
+        <label for="date_naiss">2. Date de naissance :</label>
+        <input type="date" name="date_naiss">
+    </div>
+    <div>
+        <label for="msg">3.Site  :</label>
+<input type="url" name="url" id="url"
+       placeholder="https://nom du site.com"
+       pattern="https://.*" size="30"
+       required>    </div>
+       <div>
+            <label for="msg">4. Emloi  :</label>
+       <select name="emploit" id="emploit-select">
+
+    <option value="">Choisissez votre emploi</option>
+    <option value="etudiant">Etudiant</option>
+    <option value="admin_res">Administrateur reseau</option>
+    <option value="dev_web">Developpeur web</option>
+    <option value="web_design">Web designer</option>
+    <option value="dev_ops">DevOps</option>
+
+</select>
+</div>
+<div>
+   <label for="msg">5. Approx Salaire annuel  :</label> <br>
+   <input type="number" step="1000" placeholder="$">
+   </fieldset>
+</form>
+
+   <div style="float:right;">
+<form action="Formulaire 2" method="post" name ="form2">
+    <fieldset>
+    <legend> Informations de contact : </legend>
+    <div>
+        <label for="adresse1">1.Adresse ligne 1 </label> <br>
+        <input type="text" id="adr" name="adr">
+    </div>
+    <div>
+        <label for="adresse2">2.Adresse ligne 2 </label> <br>
+        <input type="text" id="adr2" name="adr2">
+    </div>
+    <div>
+        <label for="adresse2">3.Pays </label>
+         <select name="pays" id="pays-select">
+         <option value=""></option>
+    <option value="Algerie">Algerie</option>
+    <option value="Tunisie">Tunisie</option>
+    <option value="Maroc">Maroc</option>
+
+
+</select>
+    </div>
+    <div>
+        <label for="phone">4.Tél </label>
+        <input type="text" id="tel" name="tel"placeholder="eg +21367....">
+    </div>
+     <div>
+        <label for="email">5.Courriel </label>
+        <input type="text" id="email" name="email">
+    </div>
+    </fieldset>
+    </form>
+     
+    <h1> Preferences</h1>
+      <div>
+         <p>Choisir une couleur</p>
+
+    <input type="color" id="head" name="head" value="#e66465">
+
+
+    </div>
+    <div>
+    <p>Sur unr echelle de 1 à 10 ,quel est votre degré d'enthousiasme pour HTML5?</p>
+      <input type="range" min="1" max="10" value="50" class="slider" id="my_slider">
+    </div>
+    <div>
+    <input type="submit" value="Envoyer" />
+    </div>
+
+</body>
+
+</html>
